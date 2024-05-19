@@ -9,16 +9,14 @@ Basic file explorer using Electron and React
 
 
 ## Installation
-  1. Download the latest release here
-  2. Open the downloaded file, and run Electon React File Explorer
+  1. Download the latest [release here](https://github.com/ligeirin/electronFileExplorer/releases/)
+  2. Extract the downloaded .rar file into a folder and run FileExplorer
+
+## Usage
+  1. Double-click folders to open them
+  2. Click on the left arrow icon at the top of the screen to got back one folder
+  3. Click on the icon to the right of the current path to switch between list and grid view
 
 ## License
 
 MIT © [Electron React Boilerplate](https://github.com/electron-react-boilerplate)
-
-[github-actions-status]: https://github.com/electron-react-boilerplate/electron-react-boilerplate/workflows/Test/badge.svg
-[github-actions-url]: https://github.com/electron-react-boilerplate/electron-react-boilerplate/actions
-[github-tag-image]: https://img.shields.io/github/tag/electron-react-boilerplate/electron-react-boilerplate.svg?label=version
-[github-tag-url]: https://github.com/electron-react-boilerplate/electron-react-boilerplate/releases/latest
-[stackoverflow-img]: https://img.shields.io/badge/stackoverflow-electron_react_boilerplate-blue.svg
-[stackoverflow-url]: https://stackoverflow.com/questions/tagged/electron-react-boilerplate

@@ -116,15 +116,14 @@ body {
 
 .explorer-list .file {
   border-bottom: 1px solid #cccccc25;
-
   width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 4px;
   gap: 12px;
   text-overflow: ellipsis;
+}
+
+.explorer-list table {
+  width: 100%;
 }
 
 .explorer-list .file-icon {
@@ -136,4 +135,62 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.explorer-list td {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fa-folder {
+  color: #f0ad4e !important;
+}
+
+.fa-file {
+  color: #e9e9e9 !important;
+}
+
+.fa-file-word {
+  color: #2b579a !important;
+}
+
+.fa-file-pdf {
+  color: #d9534f !important;
+}
+
+.fa-file-excel {
+  color: #207245 !important;
+}
+
+.fa-file-zipper {
+  color: #b1140e !important;
+}
+
+.fa-file-video {
+  color: #584fd9 !important;
+}
+
+.fa-file-powerpoint {
+  color: #207245 !important;
+}
+
+.fa-file-lines {
+  color: #d9534f !important;
+}
+
+.fa-file-image {
+  color: #5bc0de !important;
+}
+
+.fa-file-csv {
+  color: #207245 !important;
+}
+
+.fa-file-code {
+  color: #582072 !important;
+}
+
+.fa-file-audio {
+  color: #d9534f !important;
 }

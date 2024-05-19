@@ -43,6 +43,7 @@ export default function fileTypeIcons(type: string) {
     case '.gif':
       return faFileImage;
     case '.csv':
+    case '.json':
       return faFileCsv;
     case '.js':
     case '.ts':

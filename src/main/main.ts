@@ -15,6 +15,8 @@ import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 
+import * as fs from 'fs';
+
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -27,8 +29,24 @@ let mainWindow: BrowserWindow | null = null;
 
 ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
-  console.log(msgTemplate(arg));
   event.reply('ipc-example', msgTemplate('pong'));
+});
+
+ipcMain.on('read-folder', async (event, arg) => {
+  fs.readdir(arg[0], 'utf-8', (error, data: any) => {
+    if (error) throw error;
+
+    data = data.map((file: string) => {
+      let fileInfo = {
+        name: file,
+        path: arg[0] + file,
+        type: path.extname(file),
+      };
+      return fileInfo;
+    });
+
+    event.reply('read-folder', data);
+  });
 });
 
 if (process.env.NODE_ENV === 'production') {

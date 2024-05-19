@@ -1,12 +1,12 @@
 {
-  "name": "electron-react-boilerplate",
-  "version": "4.6.0",
-  "description": "A foundation for scalable desktop apps",
+  "name": "electron-react-file-explorer",
+  "version": "0.1.0",
+  "description": "Basic file explorer",
   "license": "MIT",
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://github.com/electron-react-boilerplate"
+    "name": "Diogo Alves",
+    "email": "diogobis23@gmail.com",
+    "url": "https://github.com/ligeirin/electronFileExplorer"
   },
   "main": "./dist/main/main.js",
   "scripts": {

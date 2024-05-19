@@ -34,18 +34,29 @@ ipcMain.on('ipc-example', async (event, arg) => {
 
 ipcMain.on('read-folder', async (event, arg) => {
   fs.readdir(arg[0], 'utf-8', (error, data: any) => {
-    if (error) throw error;
+    if (error) {
+      console.error(error);
+      event.reply('read-folder', ["blocked"]);
+      return;
+    }
 
     data = data.map((file: string) => {
-      let fileInfo = {
-        name: file,
-        path: arg[0] + file,
-        type: path.extname(file),
-      };
-      return fileInfo;
+      try {
+        let result = fs.statSync(arg[0] + file);
+
+        let fileInfo = {
+          name: file,
+          path: arg[0] + file,
+          type: path.extname(file),
+          ...result,
+        };
+        return fileInfo;
+      } catch (err) {
+        console.error(err);
+      }
     });
 
-    event.reply('read-folder', data);
+    event.reply('read-folder', data.filter((file: any) => file));
   });
 });
 
